@@ -1,0 +1,157 @@
+/* Main container */
+.internship-experience {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 5%;
+}
+
+
+.experience-timeline {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 50px;
+}
+
+/* Timeline line */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #E6E6E6;
+}
+
+/* Timeline dot */
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    background: #FFA500;
+    border-radius: 50%;
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    z-index: 1;
+}
+
+/* Experience card styling */
+.experience-content {
+    background: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.experience-details h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0;
+}
+
+.experience-details h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #555;
+    margin: 5px 0;
+}
+
+.experience-details p {
+    color: #666;
+    margin: 2px 0;
+    line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .experience-item {
+        padding-left: 40px;
+    }
+
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+        left: 14px;
+        top: 10px;
+    }
+
+    .experience-content {
+        padding: 15px;
+    }
+
+    .experience-details h2 {
+        font-size: 1.3em;
+    }
+
+    .experience-details h3 {
+        font-size: 1.1em;
+    }
+
+    .company-logo {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-box h1 {
+        font-size: 1.8em;
+    }
+
+    .experience-item {
+        padding-left: 30px;
+    }
+
+    .timeline-dot {
+        width: 10px;
+        height: 10px;
+        left: 10px;
+        top: 10px;
+    }
+
+    .experience-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .experience-details h2 {
+        font-size: 1.2em;
+    }
+
+    .experience-details h3 {
+        font-size: 1em;
+    }
+
+    .company-logo {
+        width: 40px;
+        height: 40px;
+    }
+}
